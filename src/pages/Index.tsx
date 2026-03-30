@@ -1,16 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import NavBar from "@/components/presentation/NavBar";
+import ProgressBar from "@/components/presentation/ProgressBar";
+import HeroSection from "@/components/presentation/HeroSection";
+import ProblemSection from "@/components/presentation/ProblemSection";
+import TheorySection from "@/components/presentation/TheorySection";
+import BenefitsSection from "@/components/presentation/BenefitsSection";
+import DebateSection from "@/components/presentation/DebateSection";
+import EvidenceSection from "@/components/presentation/EvidenceSection";
+import ConclusionSection from "@/components/presentation/ConclusionSection";
+import PresentationFooter from "@/components/presentation/PresentationFooter";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
-  );
-};
+const sections = [
+  { id: "home", label: "Início" },
+  { id: "problema", label: "Problema" },
+  { id: "teoria", label: "Teoria Multi-Stage" },
+  { id: "beneficios", label: "7 Benefícios" },
+  { id: "debate", label: "Debate TCI" },
+  { id: "evidencias", label: "Evidências" },
+  { id: "conclusao", label: "Conclusão" },
+];
 
-const Index = PlaceholderIndex;
+const Index = () => (
+  <>
+    <ProgressBar />
+    <NavBar sections={sections} />
+    <HeroSection />
+    <ProblemSection />
+    <TheorySection />
+    <BenefitsSection />
+    <DebateSection />
+    <EvidenceSection />
+    <ConclusionSection />
+    <PresentationFooter />
+  </>
+);
 
 export default Index;
