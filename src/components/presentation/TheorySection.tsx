@@ -36,7 +36,7 @@ const TheorySection = () => (
   <SectionWrapper id="teoria">
     <SectionHeader
       number="02 — A TEORIA MULTI-STAGE"
-      title="A Teoria Geral de Três Estágios (Curva Sigmoide em "S")"
+      title={'A Teoria Geral de Três Estágios (Curva Sigmoide em "S")'}
       lead="Contractor (2007) argumenta que a teoria de três estágios, recentemente proposta na literatura por diversos autores, funciona como um modelo evolutivo e dinâmico capaz de reconciliar os resultados empíricos aparentemente contraditórios dos últimos 30 anos de pesquisa no campo de negócios internacionais"
     />
 
