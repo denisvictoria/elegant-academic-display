@@ -14,7 +14,7 @@ const sections = [
   { id: "problema", label: "Problema" },
   { id: "teoria", label: "Teoria Multi-Stage" },
   { id: "beneficios", label: "7 Benefícios" },
-  { id: "embate", label: "O Embate" }, // <-- Adicionado ao menu
+  { id: "embate", label: "O Embate" },
   { id: "debate", label: "Debate TCI" },
   { id: "evidencias", label: "Evidências" },
   { id: "conclusao", label: "Conclusão" },
