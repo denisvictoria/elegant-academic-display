@@ -1,10 +1,19 @@
 import { useState, useMemo } from "react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer, Scatter, ScatterChart, ComposedChart, ReferenceDot } from "recharts";
+import { Line, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer, ComposedChart, ReferenceDot } from "recharts";
 import SectionWrapper from "./SectionWrapper";
 import SectionHeader from "./SectionHeader";
 
-const contractorPoints = ["Custos de aprendizagem superam benefícios", "Custos crescem mais rápido que receitas", "Adaptação cultural é cara", "Erros de entrada podem ser fatais"];
-const hennartPoints = ["Foco em eficiência de governança, não em estágios", "O modo de entrada (IDE vs. licença) depende de custos de transação", "Multinacionalidade ≠ desempenho diretamente", "Excesso de expansão = falha de governança"];
+const contractorPoints = [
+  "Expansão é um processo orgânico de aprendizagem",
+  "Ganhos superam perdas na longa fase intermediária",
+  "Escala global é imperativa para amortizar ativos intangíveis"
+];
+
+const hennartPoints = [
+  "Expansão é sintoma de eficiência, não a causa do lucro",
+  "Hierarquia (filiais) só se justifica se o mercado livre falhar",
+  "O declínio final é puramente um erro gerencial (Misfit)"
+];
 
 const DebateSection = () => {
   const [doi, setDoi] = useState(50);
@@ -29,15 +38,33 @@ const DebateSection = () => {
 
   const stageInfo = useMemo(() => {
     if (doi < 25) return {
-      text: 'Estágio 1 (Contractor): Desempenho em queda. Altos custos de aprendizagem e "desvantagem de ser estrangeiro". | Misfit (Hennart): Desajuste por sub-internacionalização.',
+      content: (
+        <>
+          <strong className="text-contractor">Estágio 1 (Contractor):</strong> Desempenho em queda. Altos custos de aprendizagem e "desvantagem de ser estrangeiro".
+          <br /><br />
+          <strong className="text-hennart">Misfit (Hennart):</strong> Desajuste por sub-internacionalização. A empresa perde eficiência por não usar o mercado adequadamente.
+        </>
+      ),
       bgClass: "bg-hennart-bg border-stage1",
     };
     if (doi <= 75) return {
-      text: "Estágio 2 (Contractor): A fase de ouro! Economias de escala globais estão sendo aproveitadas e o conhecimento global impulsiona os lucros. | Ponto Ótimo (Hennart): A governança está equilibrada.",
+      content: (
+        <>
+          <strong className="text-contractor">Estágio 2 (Contractor):</strong> A fase de ouro! Economias de escala globais e conhecimento impulsionam os lucros.
+          <br /><br />
+          <strong className="text-hennart">Ponto Ótimo (Hennart):</strong> A governança está perfeitamente equilibrada e eficiente.
+        </>
+      ),
       bgClass: "bg-contractor-bg border-contractor",
     };
     return {
-      text: "Estágio 3 (Contractor): Excesso de expansão. A complexidade destrói lucros. | Misfit (Hennart): Desajuste severo por sobre-internacionalização.",
+      content: (
+        <>
+          <strong className="text-contractor">Estágio 3 (Contractor):</strong> Excesso de expansão. Mercados distantes e complexidade destroem os lucros.
+          <br /><br />
+          <strong className="text-hennart">Misfit (Hennart):</strong> Desajuste severo por sobre-internacionalização. Abertura de filiais onde deveria ter terceirizado.
+        </>
+      ),
       bgClass: "bg-surface-warm border-stage3",
     };
   }, [doi]);
@@ -47,7 +74,7 @@ const DebateSection = () => {
       <SectionHeader
         number="04 — O DEBATE: CONTRACTOR VS. HENNART"
         title="Perspectiva Evolucionária vs. Teoria de Custos de Transação"
-        lead="Uma seção central do artigo de Contractor é sua resposta às críticas de Hennart (2007), que questiona os fundamentos teóricos da relação M/P através da perspectiva TCI"
+        lead="O embate foca em decidir se a internacionalização é um destino inevitável (Evolução) ou uma ferramenta restrita de eficiência (TCI)."
         dark
       />
 
@@ -63,12 +90,14 @@ const DebateSection = () => {
           </div>
           <ul className="space-y-0">
             {contractorPoints.map((p, i) => (
-              <li key={i} className="py-2 border-b border-muted last:border-b-0 text-sm text-foreground">• {p}</li>
+              <li key={i} className="py-2 border-b border-muted last:border-b-0 text-sm text-foreground">
+                <span className="text-contractor font-bold mr-2">•</span>{p}
+              </li>
             ))}
           </ul>
         </div>
 
-        <div className="w-11 h-11 rounded-full bg-gold text-surface-dark font-extrabold text-sm flex items-center justify-center self-center mx-auto">
+        <div className="w-11 h-11 rounded-full bg-gold text-surface-dark font-extrabold text-sm flex items-center justify-center self-center mx-auto shadow-md">
           VS
         </div>
 
@@ -77,12 +106,14 @@ const DebateSection = () => {
             <div className="w-10 h-10 rounded-full bg-hennart text-primary-foreground flex items-center justify-center font-bold">H</div>
             <div>
               <div className="font-semibold text-[0.95rem] text-foreground">Hennart</div>
-              <div className="text-xs text-muted-foreground">Teoria de Custos de Transação</div>
+              <div className="text-xs text-muted-foreground">Teoria de Custos de Transação (TCI)</div>
             </div>
           </div>
           <ul className="space-y-0">
             {hennartPoints.map((p, i) => (
-              <li key={i} className="py-2 border-b border-muted last:border-b-0 text-sm text-foreground">• {p}</li>
+              <li key={i} className="py-2 border-b border-muted last:border-b-0 text-sm text-foreground">
+                <span className="text-hennart font-bold mr-2">•</span>{p}
+              </li>
             ))}
           </ul>
         </div>
@@ -141,7 +172,7 @@ const DebateSection = () => {
           </ResponsiveContainer>
         </div>
 
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-4 mb-6 bg-slate-50 p-3 rounded-lg border border-slate-200">
           <label className="text-sm font-semibold text-foreground whitespace-nowrap">DOI:</label>
           <input
             type="range"
@@ -149,13 +180,13 @@ const DebateSection = () => {
             max={100}
             value={doi}
             onChange={(e) => setDoi(Number(e.target.value))}
-            className="flex-1 accent-gold"
+            className="flex-1 accent-gold cursor-pointer"
           />
           <span className="font-mono text-lg font-bold text-gold min-w-[3ch] text-right">{doi}%</span>
         </div>
 
-        <div className={`p-4 rounded-lg border-l-4 text-sm text-foreground leading-relaxed ${stageInfo.bgClass}`}>
-          {stageInfo.text}
+        <div className={`p-4 rounded-lg border-l-4 text-sm text-foreground leading-relaxed transition-colors duration-300 ${stageInfo.bgClass}`}>
+          {stageInfo.content}
         </div>
       </div>
     </SectionWrapper>
