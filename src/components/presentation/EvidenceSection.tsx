@@ -13,8 +13,8 @@ const EvidenceSection = () => (
   <SectionWrapper id="evidencias">
     <SectionHeader
       number="05 — EVIDÊNCIAS EMPÍRICAS E METODOLOGIA"
-      title="A Curva em S como Teoria Geral — e Seus Desafios"
-      lead="Contractor discute como a teoria multi-stage explica a diversidade de resultados, enquanto estudos posteriores como Berry & Kaul (2016) levantam questões de replicação"
+      title="A Curva em S como Teoria Geral — e os Desafios de Replicação"
+      lead="Enquanto Contractor (2007) defende que a teoria de três estágios (Curva em S) é capaz de unificar e explicar a diversidade de resultados contraditórios do passado, estudos mais recentes, como o de Berry e Kaul (2016), desafiam a universalidade desse modelo ao levantar sérias questões de endogeneidade e falhas de replicação empírica."
     />
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -23,16 +23,23 @@ const EvidenceSection = () => (
           <span className="inline-block text-[0.7rem] font-semibold px-2 py-1 rounded bg-contractor-bg text-contractor uppercase tracking-wider mb-3">
             Contractor (2007)
           </span>
-          <h3 className="font-serif text-[1.15rem] mb-3">🔬 Operacionalização e Metodologia</h3>
+          <h3 className="font-serif text-[1.15rem] mb-3">🔬 Contractor e a Lente Metodológica</h3>
           <p className="mb-3">
-            Contractor reconhece: <em>"The M/P field has been particularly vulnerable to the charge
-            of decidedly mixed results [...] partly because empiricism ran ahead of theory development"</em> (p. 465).
+            Contractor aponta que o campo de estudos sobre a relação Multinacionalidade/Desempenho (M/P)
+            acumulou resultados confusos em grande parte porque <em>"o empirismo atropelou o desenvolvimento
+            teórico"</em>.
           </p>
           <p className="mb-3">
-            Até 2000, nenhum estudo (exceto Riahi-Belkaoui 1998) especificou um <strong>termo cúbico</strong> para
-            DOI. <em>"Hence it was impossible to find a sigmoid curve in most studies"</em>.
+            Ele identifica um erro metodológico crucial na literatura: até o ano 2000 (com a exceção de
+            Riahi-Belkaoui, 1998), nenhum estudo havia especificado um <strong>termo estatístico cúbico</strong>{" "}
+            (de terceira ordem) para o Grau de Internacionalização (DOI). Sem inserir esse termo na equação,
+            era matematicamente impossível que os pesquisadores encontrassem uma curva sigmoide (em S) nos dados.
           </p>
-          <p>Diferentes formas (U, U-invertido, linear) refletem <em>quais estágios predominam</em> em cada amostra.</p>
+          <p>
+            Para Contractor, as diferentes formas encontradas nas pesquisas anteriores não invalidam a teoria
+            geral, elas apenas refletem <em>quais estágios da internacionalização predominavam</em> na amostra
+            específica de cada estudo.
+          </p>
         </div>
 
         <div className="overflow-hidden rounded-lg shadow-academic">
@@ -66,31 +73,44 @@ const EvidenceSection = () => (
           <span className="inline-block text-[0.7rem] font-semibold px-2 py-1 rounded bg-surface-warm text-gold uppercase tracking-wider mb-3">
             Contraponto Empírico
           </span>
-          <h3 className="font-serif text-[1.15rem] mb-3">⚠️ Berry & Kaul (2016): Falha na Replicação</h3>
+          <h3 className="font-serif text-[1.15rem] mb-3">⚠️ Berry & Kaul (2016): A Falha de Replicação</h3>
           <p className="mb-3">
-            Em estudo posterior, Berry & Kaul tentaram replicar Lu & Beamish (2004) com{" "}
-            <strong>2.023 multinacionais americanas</strong> (1989-2007).
+            Apesar da grande aceitação da Curva em S, Berry e Kaul (2016) testaram a robustez dessa teoria
+            tentando replicar os achados exatos de Lu e Beamish (2004). Utilizando um banco de dados maciço e
+            longitudinal com <strong>2.023 multinacionais americanas</strong> no período de 1989 a 2007, eles
+            falharam em replicar os resultados.
           </p>
           <p className="mb-3">
-            <em>"Our empirical results fail to replicate the relationship between multinationality
-            and performance found by Lu and Beamish. We see no evidence for an S-curve in our sample"</em>.
-          </p>
-          <p>
-            O efeito U encontrado na subsamostra de manufatura <strong>desaparece</strong> quando se controla
-            pela <strong>endogeneidade</strong> da multinacionalidade.
+            Os autores concluíram de forma contundente: <em>não há nenhuma evidência de uma Curva em S para a
+            amostra de multinacionais dos EUA</em>. Curiosamente, eles chegaram a encontrar uma relação marginal
+            em formato de U ao isolarem apenas a subamostra de empresas de manufatura; contudo, esse efeito
+            desapareceu completamente assim que os autores controlaram estatisticamente a{" "}
+            <strong>endogeneidade</strong> da multinacionalidade.
           </p>
         </div>
 
         <div className="bg-surface-warm border-l-4 border-gold rounded-r-lg p-5 text-[0.95rem]">
-          <strong>Implicação Metodológica:</strong> Berry & Kaul sugerem que empresas já bem-sucedidas{" "}
-          <em>escolhem</em> se internacionalizar — o que confunde a relação causal. Contractor (2007) já
-          havia notado: <em>"the context or situation of the firm, or sector, does make a difference"</em>.
+          <strong>Implicação Metodológica: A Endogeneidade e a Escolha Estratégica</strong>
+          <p className="mt-2">
+            O achado de Berry e Kaul traz um peso enorme para a literatura: eles argumentam que a
+            multinacionalidade não é uma força autônoma que "causa" o desempenho, mas sim uma{" "}
+            <em>escolha estratégica</em>. Empresas bem-sucedidas e experientes escolhem sistematicamente o
+            nível adequado de expansão global com base em suas capacidades, recursos e na estrutura do mercado.
+          </p>
+          <p className="mt-2">
+            Portanto, ao não controlarem essa endogeneidade, os estudos tradicionais correm o risco de medir
+            correlações falsas, interpretando como uma "vantagem da internacionalização" o que na verdade é o
+            reflexo de um bom planejamento prévio da gestão. Isso dialoga diretamente com a ressalva que o
+            próprio Contractor (2007) fez ao defender sua teoria, lembrando que a{" "}
+            <em>"situação da firma ou o contexto do setor faz diferença"</em>, não existindo um determinismo
+            universal aplicável a todos.
+          </p>
         </div>
       </div>
     </div>
 
     <QuoteBox
-      text="One inescapable fact remains: In virtually all empirical M/P studies, whether we see a U, inverted-U, or S-shape, there is embedded in the results a positively sloped leg over some part of the Degree of Internationalization range, thus empirically supporting the notion that international expansion is 'good' over some or much of the range."
+      text="Um fato inescapável permanece: em praticamente todos os estudos empíricos de M/P, quer vejamos um formato em U, U-invertido ou em S, há embutido nos resultados um segmento de inclinação positiva ao longo de alguma parte da faixa do Grau de Internacionalização, sustentando assim empiricamente a noção de que a expansão internacional é 'boa' em alguma ou em grande parte dessa faixa."
       author="Contractor (2007)"
       source="p. 458 — Argumento central"
     />

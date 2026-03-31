@@ -5,38 +5,38 @@ import QuoteBox from "./QuoteBox";
 const benefits = [
   {
     letter: "a",
-    title: "Knowledge acquired from abroad",
-    text: "A presença internacional aumenta a capacidade de captar conhecimentos que rivais domésticos não conseguem acessar (Kogut/Zander 1993, Ghoshal/Bartlett 1990). Diferente da experiência acumulada — refere-se a conhecimento externo.",
+    title: "Aquisição de conhecimento no exterior",
+    text: "A presença em várias nações aumenta a capacidade da empresa de absorver ideias e conhecimentos estrangeiros que rivais estritamente domésticos (ou menos internacionalizados) não conseguem acessar. É importante destacar que isso difere da \"experiência de internacionalização\"; este vetor refere-se à captação de conhecimento externo oriundo do mercado.",
   },
   {
     letter: "b",
-    title: "Accessing or \"arbitraging\" cheaper inputs",
-    text: 'Empresa presente em mais países está "in a better position to find arbitrage opportunities than its competitors that are present in few, or only one". Inclui mão de obra e quaisquer outros insumos.',
+    title: "Acesso ou \"arbitragem\" de insumos mais baratos",
+    text: "Uma empresa presente em vários países está em uma posição muito melhor para encontrar e explorar oportunidades de arbitragem em comparação com concorrentes que atuam em apenas um ou poucos mercados. Isso inclui o acesso a mão de obra de menor custo ou a quaisquer outros insumos vantajosos ao redor do globo.",
   },
   {
     letter: "c",
-    title: "Exploitation of firm-specific assets",
-    text: 'Ativos intangíveis conferem "monopolistic advantage" (Hymer 1976). Contractor rebate Hennart: conhecimento internalizado é "sticky, not easily imitable" e confere vantagem duradoura, não apenas lucros "normais".',
+    title: "Exploração de ativos específicos da firma",
+    text: "A transferência de ativos (como marcas, patentes e rotinas) para mercados estrangeiros confere vantagens monopolistas de longa duração. Rebatendo a visão estritamente econômica de Hennart, Contractor argumenta que o conhecimento internalizado é aderente (sticky) e não é facilmente imitável, o que garante à multinacional uma vantagem contínua e lucros superiores de longo prazo, e não apenas lucros \"normais\" que se dissipam rapidamente pela concorrência.",
   },
   {
     letter: "d",
-    title: "Accumulation of market power",
-    text: 'Ser grande e multinacional permite "establish preferred technical standards [...], create global brand equity, and even, in some cases, cartelize the industry to earn \'super-normal\' profits" (Kogut 1985).',
+    title: "Acúmulo de poder de mercado global",
+    text: "Ser grande e possuir ampla presença multinacional permite à empresa impor seus padrões e protocolos técnicos preferenciais, criar um imenso valor para sua marca global (brand equity) e, em alguns casos, até cartelizar a indústria para obter lucros extraordinários ou \"supernormais\".",
   },
   {
     letter: "e",
-    title: "International scale (firm-level)",
-    text: 'Para intangíveis centralizados (P&D, branding), não há MES — é "a continuously decreasing function". Empresas "must sell in multiple markets in order to justify and sustain the enormous centralized expenditures on R&D" (p. 463).',
+    title: "Escala internacional (em nível de firma)",
+    text: "Para despesas centralizadas na criação de ativos intangíveis (como Pesquisa e Desenvolvimento ou marketing global), não existe uma Escala Mínima Eficiente (MES) limitante; o custo do intangível por unidade vendida atua como uma \"função continuamente decrescente\". Portanto, as empresas de alta tecnologia têm a necessidade imperativa de vender em múltiplos mercados estrangeiros para conseguir justificar, sustentar e amortizar esses enormes gastos centralizados.",
   },
   {
     letter: "f",
-    title: "Geographical diversification",
-    text: 'Redução de risco via: (1) ciclos econômicos assíncronos; (2) volatilidade cambial suavizada com "cocktail of currencies"; (3) flexibilidade operacional com múltiplas fontes de produção.',
+    title: "Diversificação geográfica (Redução de riscos)",
+    text: "Neste contexto específico, a diversificação refere-se puramente à redução de riscos e da volatilidade para a empresa, e não ao aumento direto do lucro. Essa proteção ocorre por três vias: (1) a atuação em países com ciclos econômicos assíncronos; (2) a suavização da volatilidade através do recebimento de fluxos de caixa em um \"coquetel de moedas\" variadas; e (3) a maior flexibilidade estratégica e operacional para lidar com interrupções ao possuir múltiplas fontes de produção.",
   },
   {
     letter: "g",
-    title: "Internationalization experience",
-    text: 'A capacidade organizacional acumulada de "reproduce the firm in foreign locations" de forma mais rápida e barata. "This replication ability, at lower cost and time, is gained through greater international experience".',
+    title: "Experiência de internacionalização",
+    text: "Refere-se à capacidade organizacional, acumulada ao longo do tempo, de conseguir reproduzir a empresa em novos locais no exterior. Essa habilidade de replicação, conquistada por meio de extensa experiência internacional, permite que as sucessivas aberturas de filiais estrangeiras sejam feitas de forma muito mais rápida e barata, impulsionando os lucros da multinacional.",
     wide: true,
   },
 ];
@@ -45,8 +45,8 @@ const BenefitsSection = () => (
   <SectionWrapper id="beneficios" variant="alt">
     <SectionHeader
       number="03 — ESTÁGIO 2: OS SETE BENEFÍCIOS"
-      title="Os Vetores do Desempenho Positivo"
-      lead='Contractor detalha sete mecanismos específicos pelos quais, no Estágio 2, "the following benefits begin to outweigh these incremental costs" (p. 455)'
+      title="Os Vetores do Desempenho Positivo (Estágio 2)"
+      lead="Contractor (2007) detalha sete mecanismos específicos pelos quais, no Estágio 2 da expansão, os benefícios incrementais de adicionar novos mercados começam a superar os custos marginais"
     />
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -67,7 +67,7 @@ const BenefitsSection = () => (
     </div>
 
     <QuoteBox
-      text="Based on the seven foregoing benefits, the internationalizing firm, over a considerable range in middle Stage 2, enjoys the net benefits of international expansion."
+      text="Com base nos sete benefícios supracitados, a empresa em processo de internacionalização, ao longo de uma considerável faixa intermediária do Estágio 2, desfruta dos benefícios líquidos da expansão internacional."
       author="Contractor (2007)"
       source="p. 458 — Síntese dos benefícios"
     />
