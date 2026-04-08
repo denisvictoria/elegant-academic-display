@@ -44,9 +44,9 @@ const benefits = [
 const BenefitsSection = () => (
   <SectionWrapper id="beneficios" variant="alt">
     <SectionHeader
-      number="03"
-      subtitle="Estágio 2: Os Sete Benefícios"
+      number="03 — ESTÁGIO 2: OS SETE BENEFÍCIOS"
       title="Os Vetores do Desempenho Positivo"
+      lead="Contractor (2007) detalha sete mecanismos específicos pelos quais, no Estágio 2 da expansão, os benefícios incrementais de adicionar novos mercados começam a superar os custos marginais."
     />
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
