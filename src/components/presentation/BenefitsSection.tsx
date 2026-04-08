@@ -74,11 +74,11 @@ const BenefitsSection = () => (
       ))}
     </div>
 
-    <QuoteBox className="mt-12">
-      "Com base nos sete benefícios supracitados, a empresa em processo de
-      internacionalização, ao longo de uma considerável faixa intermediária do
-      Estágio 2, desfruta dos benefícios líquidos da expansão internacional."
-    </QuoteBox>
+    <QuoteBox
+      text="Com base nos sete benefícios supracitados, a empresa em processo de internacionalização, ao longo de uma considerável faixa intermediária do Estágio 2, desfruta dos benefícios líquidos da expansão internacional."
+      author="Contractor (2007)"
+      source="Is International Business Good for Companies?"
+    />
   </SectionWrapper>
 );
 
