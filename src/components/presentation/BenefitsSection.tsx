@@ -10,7 +10,7 @@ const benefits = [
   },
   {
     letter: "b",
-    title: "Acesso ou \"arbitragem\" de insumos mais baratos",
+    title: 'Acesso ou "arbitragem" de insumos mais baratos',
     text: "Exploração de oportunidades globais de arbitragem, garantindo acesso flexível a mão de obra de menor custo e matérias-primas geograficamente vantajosas.",
   },
   {
@@ -31,7 +31,7 @@ const benefits = [
   {
     letter: "f",
     title: "Diversificação geográfica (Redução de riscos)",
-    text: "Proteção contra a volatilidade global através de: (1) ciclos económicos assíncronos; (2) fluxos de caixa num \"cocktail de moedas\"; (3) múltiplas fontes flexíveis de produção.",
+    text: 'Proteção contra a volatilidade global através de: (1) ciclos económicos assíncronos; (2) fluxos de caixa num "cocktail de moedas"; (3) múltiplas fontes flexíveis de produção.',
   },
   {
     letter: "g",
@@ -39,3 +39,47 @@ const benefits = [
     text: "Capacidade organizacional acumulada para replicar a empresa no exterior. Com a experiência prévia, abrir novas filiais torna-se um processo significativamente mais rápido e barato.",
     wide: true,
   },
+];
+
+const BenefitsSection = () => (
+  <SectionWrapper id="beneficios" variant="alt">
+    <SectionHeader
+      number="03 — ESTÁGIO 2: OS SETE BENEFÍCIOS"
+      title="Os Vetores do Desempenho Positivo"
+      lead="Contractor (2007) detalha sete mecanismos específicos pelos quais, no Estágio 2 da expansão, os benefícios incrementais de adicionar novos mercados começam a superar os custos marginais."
+    />
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+      {benefits.map((b) => (
+        <div
+          key={b.letter}
+          className={`bg-card rounded-lg p-6 shadow-academic border border-border hover:shadow-academic-md transition-shadow ${
+            b.wide ? "md:col-span-2" : ""
+          }`}
+        >
+          <div className="flex items-start gap-4">
+            <span className="flex-none w-9 h-9 rounded-full bg-contractor text-primary-foreground flex items-center justify-center font-mono text-sm font-semibold">
+              {b.letter}
+            </span>
+            <div>
+              <h4 className="text-lg font-serif font-semibold text-foreground mb-1">
+                {b.title}
+              </h4>
+              <p className="text-muted-foreground text-[0.95rem] leading-relaxed">
+                {b.text}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <QuoteBox
+      text="Com base nos sete benefícios supracitados, a empresa em processo de internacionalização, ao longo de uma considerável faixa intermediária do Estágio 2, desfruta dos benefícios líquidos da expansão internacional."
+      author="Contractor (2007)"
+      source="Is International Business Good for Companies?"
+    />
+  </SectionWrapper>
+);
+
+export default BenefitsSection;
